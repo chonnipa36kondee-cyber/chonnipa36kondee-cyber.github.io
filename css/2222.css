@@ -1,0 +1,326 @@
+/* ===== RESET & GENERAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  position: relative;
+  background: url('/img/3.WEBP') center/cover no-repeat;
+  color: #ffffff;
+}
+
+.header-overlay {
+  background: rgba(15, 15, 15, 0.78);
+  padding: 22px 0;
+}
+
+.header-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff5500;
+  line-height: 1.2;
+}
+
+.header-title p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #dddddd;
+  margin-top: 2px;
+}
+
+.header-logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-k {
+  color: #ff5500;
+}
+
+.logo-mutnb {
+  color: #00b359;
+}
+
+.header-bottom-bar {
+  height: 4px;
+  background-color: #ff5500;
+  width: 100%;
+}
+
+/* ===== TOP NAV ===== */
+.top-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #e65100;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #ff5500;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 25px 0 40px;
+}
+
+/* Banner */
+.banner-section {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.course-heading {
+  margin-bottom: 20px;
+}
+
+.course-heading h2 {
+  font-size: 1.35rem;
+  color: #e65100;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.heading-line {
+  height: 2px;
+  background-color: #ff5500;
+  width: 100%;
+}
+
+/* Course Cards List */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course-card {
+  position: relative;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-overlay {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 20px 35px;
+  color: #ffffff;
+  gap: 25px;
+}
+
+/* Left overlay with slanted angle */
+.overlay-left {
+  width: 72%;
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0 100%);
+  background: rgba(30, 30, 30, 0.93);
+  padding-left: 20px;   /* ลดขอบซ้ายลง (เดิม 35px) เพื่อให้ทุกอย่างขยับไปทางซ้าย */
+  padding-right: 110px; /* เพิ่มขอบขวา เพื่อกันไม่ให้ข้อความไปชนรอยเฉียงด้านขวา */
+  gap: 15px;            /* ลดช่องว่างระหว่างโลโก้ IT กับข้อความ (เดิม 25px) */
+}
+
+
+/* Right overlay with slanted angle */
+.overlay-right {
+  width: 72%;
+  margin-left: auto;
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+  background: rgba(30, 30, 30, 0.93);
+  padding-left: 140px; /* Adjust from 70px to 140px to push text past the diagonal edge */
+  justify-content: flex-end;
+}
+
+.card-code {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #ff5500;
+  line-height: 1;
+  min-width: 100px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.card-details {
+  flex-grow: 1;
+}
+
+.card-details h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.card-details .degree {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 3px;
+}
+
+.card-details .note {
+  font-size: 0.85rem;
+  color: #ffb84d;
+  margin-bottom: 3px;
+}
+
+.card-details p {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  margin-bottom: 2px;
+}
+
+.card-details .desc {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #bbbbbb;
+}
+
+/* Bottom Line */
+.bottom-divider {
+  height: 2px;
+  background-color: #ff5500;
+  margin-top: 25px;
+}
+
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
+.site-footer {
+  background-image: linear-gradient(rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.9)), url('/img/6.JPG');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 40px 0 30px;
+  border-top: 4px solid #ff6b00;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid #ff6b00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 6px;
+  font-weight: 300;
+}
+
+/* สไตล์สำหรับปรับขนาด Google Maps */
+.footer-map-container {
+  flex: 1;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-map-iframe {
+  width: 100%;
+  height: 230px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 850px) {
+  .overlay-left,
+  .overlay-right {
+    width: 100%;
+    clip-path: none;
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .card-overlay {
+    flex-direction: column;
+    text-align: center;
+    background: rgba(25, 25, 25, 0.92);
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-map {
+    width: 100%;
+  }
+}

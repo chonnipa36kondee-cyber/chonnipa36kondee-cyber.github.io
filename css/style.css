@@ -1,0 +1,338 @@
+/* ==========================================
+   RESET & GLOBAL STYLES
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   HEADER STYLES
+   ========================================== */
+.site-header {
+  position: relative;
+  /* ใส่รูปภาพพื้นหลังนักศึกษา */
+  background-image: url(../img/3.WEBP);
+  background-size: cover;
+  background-position: center;
+  color: #c84100;
+}
+
+.header-overlay {
+  /* ใส่ฉากสีดำใสโปร่งแสงทับรูปภาพให้มืดลง */
+  background: rgba(0, 0, 0, 0.65); 
+  padding: 25px 0 15px 0;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* จัดโลโก้ให้อยู่ชิดมุมขวาล่าง */
+}
+
+/* หัวข้อหลักเปลี่ยนเป็นสีส้ม */
+
+.header-title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff5722;
+}
+
+.header-title p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* โลโก้ KMUTNB มุมขวา */
+
+.header-logo {
+  opacity: 40%;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-orange {
+  color: #ff6b00;
+}
+
+.logo-green {
+  color: #00a651;
+}
+
+
+/* เส้นสีส้มกั้นล่างสุดของ Header */
+.header-bar {
+  height: 4px;
+  background-color: #ff4500;
+  width: 100%;
+}
+
+/* ==========================================
+   TOP NAV STYLES
+   ========================================== */
+.top-nav {
+  background-color: #f7f7f7; /* พื้นหลังเทาอ่อนมาก */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.top-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: flex-end; /* จัดเมนูชิดขวา */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* สร้างเส้นแบ่งแนวตั้ง | ระหว่างเมนู */
+.top-nav li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #cccccc; /* สีเส้นแบ่ง */
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+.top-nav a {
+  color: #ff5722; /* สีข้อความส้ม */
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.top-nav a:hover {
+  color: #d84315;
+}
+
+/* ==========================================
+   HERO BANNER
+   ========================================== */
+.hero {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   MAIN MENU NAVIGATION
+   ========================================== */
+.main-menu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 12px 0;
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main-menu a {
+  color: #ff6b00;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+  color: #d85600;
+  border-bottom: 2px solid #ff6b00;
+}
+
+/* ==========================================
+   MAIN POSTER SECTION
+   ========================================== */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  background-color: #222222;
+  min-height: 600px;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.side-bg {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4) contrast(1.1);
+  opacity: 0.8;
+}
+
+.left-bg {
+  background-image: url('/img/6.JPG');
+}
+
+.right-bg {
+  background-image: url('/img/6.JPG');
+}
+
+.poster {
+  width: 100%;
+  max-width: 780px;
+  z-index: 2;
+  margin: 0 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
+.site-footer {
+  background-image: linear-gradient(rgba(15, 15, 15, 0.9), rgba(15, 15, 15, 0.9)), url('/img/6.JPG');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 40px 0 30px;
+  border-top: 4px solid #ff6b00;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid #ff6b00;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 6px;
+  font-weight: 300;
+}
+
+/* สไตล์สำหรับปรับขนาด Google Maps */
+.footer-map-container {
+  flex: 1;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-map-iframe {
+  width: 100%;
+  height: 230px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .main-menu ul {
+    gap: 15px;
+    font-size: 13px;
+  }
+
+  .content {
+    padding: 15px 0;
+  }
+
+  .side-bg {
+    display: none;
+  }
+
+  .poster {
+    margin: 0 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-map-container {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+
+
